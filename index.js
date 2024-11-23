@@ -1,7 +1,9 @@
 // const exp = require("constants");
 const express = require("express");
 const app = express();
-const port = 8080;
+// const port = 8080;
+const port = process.env.PORT || 3000;  //for vercel deployment
+
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
  // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
@@ -77,3 +79,5 @@ app.delete("/posts/:id",(req,res)=>{
      res.redirect("/posts");
     
 });
+
+module.exports = app;
