@@ -30,7 +30,7 @@ let posts= [
 
 app.get("/",(req,res)=>{
     res.render("index",{posts});
-})
+});
 
 
 app.get("/posts",(req,res)=>{
